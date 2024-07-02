@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <h1 style="color: white; font-size: 7rem">tempo</h1>
+    <form class="search" onsubmit="event.preventDefault(); search()">
+        <input class="input" placeholder="Digite a cidade: " id="writecity" autocomplete="off">
+        <button>
+            <span class="material-symbols-outlined">
+                search
+                </span>Buscar
+        </button>
+    </form>
+    <div class="card hidden" id="card">
+        <div class="location">
+            <span class="material-symbols-outlined" translate="no">
+                location_on
+                </span>
+            <span id="cidade">City, </span>
+            <span id="pais">Country</span>
+        </div>
+
+        <div class="temperatures">
+            <div style="display: flex; justify-content: center; flex-direction: column; margin-top: 5px;">
+                <div class="main-temp">
+                    <h1 id="main">0</h1>
+                    <span class="main-2nd">°C</span>
+                </div>
+                <div class="secondary-temp">
+                    <div class="sec-temp">
+                        <span>Max</span>
+                        <span id="max">12</span>
+                        <span>°C</span>
+                    </div>
+                    <div class="sec-temp">
+                        <span>Min</span>
+                        <span id="min">12</span>
+                        <span>°C</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather">
+                <img src="https://openweathermap.org/img/wn/01d@4x.png" id="image">
+                <span id="desc">desc</span>
+            </div>
+            <div class="min-max" style="display: none;">
+                <div class="minmaxTemp">
+                    <span class="material-symbols-outlined">
+                        arrow_upward
+                        </span>
+                    <div class="minmaxTempText">
+                        <h2 id="max">0</h2>
+                        <span>°C</span>
+                    </div>
+                </div>
+                <div class="minmaxTemp">
+                    <span class="material-symbols-outlined">
+                        arrow_downward
+                        </span>
+                    <div class="minmaxTempText">
+                        <h2 id="min">0</h2>
+                        <span>°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="complementary">
+            <div class="complementary-entry">
+                <span>Sensação</span>
+                <span id="feelInfo">info</span>
+            </div>
+            <div class="complementary-entry">
+                <span>Humidade</span>
+                <span id="humidityInfo">info</span>
+            </div>
+            <div class="complementary-entry">
+                <span>Vento</span>
+                <span id="windInfo">info</span>
+            </div>
+        </div>
+    
+    </div>
+</body>
+</html>

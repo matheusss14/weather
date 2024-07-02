@@ -1,0 +1,230 @@
+
+* {
+    max-width: 100%;
+}
+
+h1, h2 {
+    margin:0;
+    padding: 0;
+    line-height: 1;
+}
+span {
+    margin:0;
+    padding:0;
+}
+
+span {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('./qmn2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    overflow: hidden;
+}
+
+.search {
+    margin-top: 20px;
+    max-width: 80%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.search img {
+    width: 10px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.input {
+    background-color:rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    border: none;
+
+    padding: 10px 20px;
+    transition: 0.3s linear;
+
+    font-size: 1.4rem;
+    max-width: 40%;
+    width: 900px;
+}
+
+.input:hover {
+    background-color:rgba(255, 255, 255, 0.9);
+}
+
+.input:focus {
+    border: none;
+    outline: none;
+}
+
+button {
+    background-color: rgba(64, 112, 218, 0.65);
+    border: 0;
+    padding: 10px 20px;
+    transition: 0.3s linear;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1.4rem;
+}
+
+button:hover {
+    background-color: rgb(77, 133, 255);
+}
+
+
+@media (max-width: 768px) {
+    .input {
+        max-width: 70%;
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    width: 500px;
+    aspect-ratio: 0.9 / 1.1;
+    background-color: rgba(255, 255, 255, 0.55);
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 30%);
+    border-radius: 85px;
+
+    transition: 0.3s linear;
+}
+
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.location {
+    display: flex;
+    align-items: center;
+}
+
+.temperatures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    height: 50%;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.main-temp {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.secondary-temp {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sec-temp {
+    padding: 0 10px;
+}
+
+#main {
+    font-size:10rem;
+    font-weight: 700;
+}
+
+.main-2nd {
+    font-size: 4rem;
+}
+
+.min-max {
+    display: flex;
+    flex-direction: column;
+}
+.minmaxTemp {
+    display: flex;
+    align-items: center;
+}
+.minmaxTemp span {
+    font-size: 4rem;
+    font-weight: 200;
+}
+.minmaxTempText {
+    display: flex;
+    align-items: flex-start;
+}
+
+.minmaxTempText h2 {
+    font-size: 4rem;
+}
+.minmaxTempText span {
+    font-size: 2rem;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather img {
+    height: auto;
+    width: 200px;
+}
+
+.complementary {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.complementary-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    #main {
+        font-size: 5rem;
+    }
+
+    .sec-temp {
+        padding: 0px 5px;
+    }
+
+    .sec-temp span {
+        font-size: 0.8rem;
+    }
+}
